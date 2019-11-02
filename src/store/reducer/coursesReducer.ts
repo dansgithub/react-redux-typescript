@@ -1,9 +1,9 @@
 import jsonMock from "../../mock/courseList.json";
-import {CourseActionType, CourseItem} from "../../types";
+import { CourseActionType, CourseItem } from "../../types";
 
 const initialState = jsonMock;
 
-const rootReducer = (state = initialState, action: CourseActionType) => {
+const courseReducer = (state = initialState, action: CourseActionType) => {
   switch (action.type) {
     case "TOGGLE_LIKE":
       return {
@@ -19,4 +19,4 @@ const rootReducer = (state = initialState, action: CourseActionType) => {
   }
 };
 
-export default rootReducer;
+export default courseReducer;
